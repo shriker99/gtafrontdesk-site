@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA Front Desk | Stop losing HVAC and plumbing jobs to voicemail</title>
+<title>GTA Front Desk | AI front desk for GTA HVAC and plumbing shops</title>
 <meta name="description" content="Done-for-you AI front desk for GTA heating, cooling and plumbing shops with 1 to 10 trucks. Answers 24/7, texts back missed callers, books jobs, routes emergencies to your on-call tech. $497/month.">
 <link rel="canonical" href="https://gtafrontdesk.ca/">
 <meta name="theme-color" content="#0B1D36">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gtafrontdesk.ca/">
-<meta property="og:title" content="GTA Front Desk: stop losing jobs to voicemail">
+<meta property="og:title" content="GTA Front Desk: the phone rings while you're on the roof. We pick it up.">
 <meta property="og:description" content="AI front desk for GTA HVAC and plumbing shops. Answers 24/7, texts back missed callers, books jobs, routes emergencies.">
 <meta property="og:image" content="https://gtafrontdesk.ca/assets/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -63,6 +63,15 @@ details p{color:var(--muted);margin:10px 0 0}
 .cta{text-align:center;padding:40px 0 48px}
 .cta p{color:var(--muted)}
 .fine{color:var(--muted);font-size:.88rem}
+.ctarow{margin-top:4px}
+.refund{margin:12px 0 0;padding:10px 14px;border-left:4px solid var(--orange);background:#0E2240;color:var(--ink);font-weight:600}
+.strip{margin:16px 0 4px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.strip div{display:grid;grid-template-columns:1fr;gap:2px;padding:10px 14px;border-top:1px solid var(--line)}
+.strip div:first-child{border-top:0}
+.strip span:last-child{color:var(--muted)}
+.strip .us{background:#0E2240}.strip .us span{color:var(--ink);font-weight:700}
+@media(min-width:700px){.strip div{grid-template-columns:2fr 3fr;gap:12px}}
+.founder p{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font-size:.9rem}
 .by{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--ink);font-weight:600}
 .by svg{width:24px;height:24px;flex:none}
@@ -80,11 +89,17 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
 <main id="main">
   <div class="wrap">
     <section class="hero" aria-labelledby="h1">
-      <p class="eyebrow">For heating, cooling and plumbing shops in the GTA · 1 to 10 trucks</p>
-      <h1 id="h1">Stop losing jobs to <em>voicemail</em>.</h1>
-      <p class="lede">When you're on a roof or under a sink, the phone still rings. GTA Front Desk answers every call 24/7, texts back anyone who hangs up, books routine jobs, and sends emergencies straight to your on-call tech. We set it up and run it for you.</p>
-      <a class="btn" href="#contact">Book a 15-minute demo</a>
-      <p class="sub">$497/month + $497 setup. Month-to-month, cancel anytime.</p>
+      <p class="eyebrow">Maple, Ontario · HVAC and plumbing shops · 1 to 10 trucks</p>
+      <h1 id="h1">The phone rings while you're on the roof. <em>We pick it up.</em></h1>
+      <p class="lede">GTA Front Desk answers 24/7 in your company name, texts back hang-ups, books only the windows you open, and sends gas, no-heat, and flood calls to your on-call tech. You call the sample shop before you pay. $497 CAD a month, $497 setup, cancel anytime.</p>
+      <!-- FIX 1 (hidden until a real Canadian demo number exists). Replace NUMBER/E164 and remove the hidden attribute:
+      <p><a class="btn" href="tel:+1E164">Call the sample heating company</a> <span class="sub">It picks up now: NUMBER</span></p>
+      -->
+      <div class="ctarow">
+        <!-- CALENDAR SLOT: when a Cal.com (or Google appointment) page exists, change this href to that URL and the label to "Pick a 15-minute slot". -->
+        <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
+        <p class="sub">or email <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
+      </div>
     </section>
 
     <section aria-labelledby="how">
@@ -93,6 +108,13 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
         <div class="card"><span class="step" aria-hidden="true">1</span><h3>Tell us how you run</h3><p>Your hours, service area, call-out fee, what counts as an emergency, and who's on call. One short call or email.</p></div>
         <div class="card"><span class="step" aria-hidden="true">2</span><h3>We build and test it</h3><p>We set up the desk in your company's name, then you call it yourself and approve every answer before it goes live.</p></div>
         <div class="card"><span class="step" aria-hidden="true">3</span><h3>Forward your line</h3><p>Keep your number. Unanswered or after-hours calls forward to the desk. You get a text with every job and lead.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="founder">
+      <h2 id="founder">Local, and you test it first</h2>
+      <div class="card founder">
+        <p>Built in Maple, Ontario. Not a US call centre with a Toronto area code. We set the hours, the emergency list, and the on-call number with you. You call it and approve every answer before it goes live. Callers are told it is a virtual assistant. PIPEDA: your customer list stays yours; we say before signup if any provider stores data outside Canada; texts follow CASL.</p>
       </div>
     </section>
 
@@ -133,6 +155,13 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
       <div class="card">
         <p class="price">$497 <small>CAD / month</small></p>
         <p style="color:var(--muted);margin-top:8px">Plus a one-time $497 setup fee. Plus applicable taxes.</p>
+        <p class="refund">First month refunded if it books zero jobs you accept. Setup fee refunded if you do not approve the test calls.</p>
+        <div class="strip" role="table" aria-label="Price compared with human answering services">
+          <div role="row"><span role="cell"><a href="https://www.ruby.com/plans-and-pricing/">Ruby</a> (human, their page)</span><span role="cell">$250 USD for 50 minutes, $720 for 200</span></div>
+          <div role="row"><span role="cell"><a href="https://smith.ai/pricing/receptionists">Smith.ai</a> human</span><span role="cell">$300 USD for 30 calls</span></div>
+          <div role="row" class="us"><span role="cell">GTA Front Desk</span><span role="cell">$497 CAD, nights and weekends, no per-minute meter, we set it up</span></div>
+        </div>
+        <p class="fine">Competitor prices as published on their pricing pages, checked Oct 3, 2026. Prices change.</p>
         <ul class="ticks">
           <li>24/7 answering in your company's name</li>
           <li>Emergency routing to your on-call tech</li>
@@ -142,7 +171,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
           <li>Setup, testing and monthly tuning done for you</li>
           <li>Month-to-month. Cancel anytime, no long-term contract</li>
         </ul>
-        <a class="btn" href="#contact">Book a 15-minute demo</a>
+        <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
       </div>
     </section>
 
@@ -159,8 +188,11 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
 
     <section class="cta" id="contact" aria-labelledby="ctah">
       <h2 id="ctah">Hear it answer a call in 15 minutes</h2>
-      <p>Email us your shop name and a good time. We'll set up a live demo on a sample heating company.</p>
-      <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Demo%20request%20-%20GTA%20Front%20Desk&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20time%20for%20a%2015-minute%20demo%3A%0A">Email gtafrontdesk@agentmail.to</a>
+      <p>Email us your shop name and a good time. We'll run a live demo on a sample heating company.</p>
+      <!-- FIX 1 (hidden): add the "Call the sample heating company" tel: button here too once a real number exists. -->
+      <!-- CALENDAR SLOT: swap this href for the Cal.com link later. -->
+      <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
+      <p class="sub">or email <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
     </section>
   </div>
 </main>
