@@ -33,7 +33,8 @@
   function fmtNum(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
   function formatCAD(n) { if (typeof n !== "number" || !isFinite(n) || n < 0) { n = 0; } return "CA$" + fmtNum(n); }
   function message(res, lim) {
-    if (res.note === "invalid") { return "Enter a number from " + lim.min + " to " + fmtNum(lim.max) + ". Using " + fmtNum(lim.min) + " for now."; }
+    if (res.note === "empty") { return "Empty. Enter a number from " + lim.min + " to " + fmtNum(lim.max) + ". Using " + fmtNum(lim.min) + " for now."; }
+    if (res.note === "invalid") { return "That isn't a number. Enter a number from " + lim.min + " to " + fmtNum(lim.max) + ". Using " + fmtNum(lim.min) + " for now."; }
     if (res.note === "negative") { return "Can't be below " + lim.min + ". Using " + lim.min + "."; }
     if (res.note === "high") { return "Capped at " + fmtNum(lim.max) + " so the estimate stays realistic."; }
     return "";
@@ -70,7 +71,7 @@
     var out = doc.getElementById("lost"), detail = doc.getElementById("detail");
     function run() {
       var input = {};
-      for (var k in els) { input[k] = els[k].value; }
+      for (var k in els) { input[k] = (els[k].validity && els[k].validity.badInput) ? "not-a-number" : els[k].value; }
       var r = trades(input);
       for (var f in els) {
         var w = doc.getElementById(f + "-warn"), msg = r.warnings[f] || "";
