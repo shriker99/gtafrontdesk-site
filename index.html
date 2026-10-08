@@ -29,7 +29,7 @@
 <header>
   <div class="wrap">
     <a class="brand" href="/"><img src="assets/favicon.svg" alt="" width="28" height="28">GTA Front Desk</a>
-    <a class="btn sm" href="#contact">Book a demo</a>
+    <a class="btn sm" href="https://cal.com/gtafrontdesk/demo" target="_blank" rel="noopener">Book a demo<span class="vh"> (opens in a new tab)</span></a>
   </div>
 </header>
 <main id="main">
@@ -42,8 +42,7 @@
       <p><a class="btn" href="tel:+12895134357">Call the sample heating company</a> <span class="sub"><span class="live" aria-hidden="true"></span>It picks up now: +1 289-513-4357 (289-513-HELP)</span></p>
       <p class="sub">Demo line for a fictional HVAC shop in the GTA. No real bookings are made.</p>
       <div class="ctarow">
-        <!-- CALENDAR SLOT: when a Cal.com (or Google appointment) page exists, change this href to that URL and the label to "Pick a 15-minute slot". -->
-        <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
+        <a class="btn" href="https://cal.com/gtafrontdesk/demo" target="_blank" rel="noopener">Book a 15-minute demo<span class="vh"> (opens in a new tab)</span></a>
         <p class="sub">or email <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
       </div>
       </div>
@@ -120,7 +119,7 @@
           <li>Setup, testing and monthly tuning done for you</li>
           <li>Month-to-month. Cancel anytime, no long-term contract</li>
         </ul>
-        <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
+        <a class="btn" href="https://cal.com/gtafrontdesk/demo" target="_blank" rel="noopener">Book a 15-minute demo<span class="vh"> (opens in a new tab)</span></a>
       </div>
     </section>
 
@@ -137,22 +136,66 @@
 
     <section class="cta" id="contact" aria-labelledby="ctah">
       <h2 id="ctah">Hear it answer a call in 15 minutes</h2>
-      <p>Email us your shop name and a good time. We'll run a live demo on a sample heating company.</p>
+      <p>Pick a 15-minute time on our booking page, or <a href="#callback">ask for a call back</a>. We'll run a live demo on a sample heating company.</p>
       <!-- FIX 1 (hidden): add the "Call the sample heating company" tel: button here too once a real number exists. -->
-      <!-- CALENDAR SLOT: swap this href for the Cal.com link later. -->
-      <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
+      <a class="btn" href="https://cal.com/gtafrontdesk/demo" target="_blank" rel="noopener">Book a 15-minute demo<span class="vh"> (opens in a new tab)</span></a>
       <p class="sub">or email <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
+    </section>
+
+    <section id="callback" class="cb" aria-labelledby="cbh">
+      <div class="card cb-card">
+        <h2 id="cbh">Request a callback</h2>
+        <p>Leave your number and we'll call you back about GTA Front Desk. Only your name and phone number are required.</p>
+        <form id="cb-form" class="form" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="access_key" value="7133a660-2dbb-4c3d-83a0-81c0b7436d09">
+          <input type="hidden" name="subject" value="New website lead - GTA Front Desk">
+          <input type="hidden" name="from_name" value="gtafrontdesk.ca">
+          <input type="hidden" name="redirect" value="https://gtafrontdesk.ca/thanks.html">
+          <div class="hp" aria-hidden="true"><label for="cb-botcheck">Leave this box unchecked</label><input type="checkbox" id="cb-botcheck" name="botcheck" tabindex="-1" autocomplete="off"></div>
+          <div class="grid g2">
+            <div>
+              <label for="cb-name">Your name <span class="req">(required)</span></label>
+              <input id="cb-name" name="name" type="text" required maxlength="80" autocomplete="name" aria-describedby="cb-name-err">
+              <p class="warn" id="cb-name-err"></p>
+            </div>
+            <div>
+              <label for="cb-business">Business name <span class="opt">(optional)</span></label>
+              <input id="cb-business" name="business" type="text" maxlength="120" autocomplete="organization" aria-describedby="cb-business-err">
+              <p class="warn" id="cb-business-err"></p>
+            </div>
+            <div>
+              <label for="cb-phone">Phone <span class="req">(required)</span></label>
+              <input id="cb-phone" name="phone" type="tel" required maxlength="20" autocomplete="tel" inputmode="tel" pattern=" *(\+?1[ .\-]?)?(\([2-9][0-9]{2}\)|[2-9][0-9]{2})[ .\-]?[2-9][0-9]{2}[ .\-]?[0-9]{4} *" title="A 10-digit Canadian or US number, for example 416-555-0110" aria-describedby="cb-phone-hint cb-phone-err">
+              <p class="hint" id="cb-phone-hint">For example 416-555-0110</p>
+              <p class="warn" id="cb-phone-err"></p>
+            </div>
+            <div>
+              <label for="cb-email">Email <span class="opt">(optional)</span></label>
+              <input id="cb-email" name="email" type="email" maxlength="120" autocomplete="email" aria-describedby="cb-email-err">
+              <p class="warn" id="cb-email-err"></p>
+            </div>
+          </div>
+          <label for="cb-message">Anything we should know? <span class="opt">(optional)</span></label>
+          <textarea id="cb-message" name="message" rows="4" maxlength="1000" aria-describedby="cb-message-hint cb-message-err"></textarea>
+          <p class="hint" id="cb-message-hint">Up to 1,000 characters. A good time to call helps.</p>
+          <p class="warn" id="cb-message-err"></p>
+          <p class="cb-actions"><button class="btn" type="submit" id="cb-submit">Request a callback</button></p>
+          <p class="fine cb-privacy">We only use this to call you back about GTA Front Desk.</p>
+          <div class="cb-status" id="cb-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
     </section>
   </div>
 </main>
 <footer>
   <div class="wrap">
     <p>GTA Front Desk · Greater Toronto Area, Ontario, Canada · <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
-    <p class="fine">Privacy: this site sets no cookies and uses no trackers or analytics. If you email us, we use your details only to reply, and we delete them on request. The calculator runs only in your browser and sends nothing.</p>
+    <p class="fine">Privacy: this site sets no cookies and uses no trackers or analytics. If you email us or use the callback form, we use your details only to reply, and we delete them on request. The callback form is delivered to our inbox by Web3Forms, a form-to-email service. The booking button opens Cal.com, which has its own privacy policy. The calculator runs only in your browser and sends nothing.</p>
     <div class="by"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#0B1D36"/><g stroke-width="62" stroke-linecap="round"><line x1="256" y1="256" x2="146" y2="146" stroke="#E8EEF4"/><line x1="256" y1="256" x2="366" y2="146" stroke="#E8EEF4"/><line x1="256" y1="256" x2="146" y2="366" stroke="#E8EEF4"/><line x1="256" y1="256" x2="366" y2="366" stroke="#E85D04"/></g></svg><span>GTA Front Desk by XploreFuture</span></div>
   </div>
 </footer>
 <script src="assets/js/calc.js" defer></script>
 <script src="assets/js/fx.js" defer></script>
+<script src="assets/js/lead.js" defer></script>
 </body>
 </html>
