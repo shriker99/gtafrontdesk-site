@@ -1,4 +1,4 @@
-/* GTA Front Desk callback form. Progressive enhancement over a plain HTML POST to Web3Forms.
+/* GTA Front Desk contact form (we reply by email). Progressive enhancement over a plain HTML POST to Web3Forms.
    Without JS the browser posts the form (native required/pattern/maxlength) and Web3Forms redirects to /thanks.html.
    With JS: trim + validate, inline errors (aria-describedby), fetch with Accept: application/json, aria-live status.
    UMD so Node tests can load the pure validate(); no cookies, no storage, no third-party scripts. */
@@ -24,8 +24,8 @@
   var FIELDS = {
     name:     { max: 80,   required: true,  label: "your name" },
     business: { max: 120,  required: false, label: "your business name" },
-    phone:    { max: 20,   required: true,  label: "your phone number" },
-    email:    { max: 120,  required: false, label: "your email" },
+    phone:    { max: 20,   required: false, label: "your phone number" },
+    email:    { max: 120,  required: true,  label: "your email" },
     message:  { max: 1000, required: false, label: "a message" }
   };
   // Control characters (keep tab/newline in the message only).
@@ -109,7 +109,7 @@
     form.addEventListener("input", function (e) {
       var t = e.target, k = t && t.name;
       if (!k || !FIELDS[k] || !t.hasAttribute("aria-invalid")) { return; }
-      var one = {}; one[k] = t.value; if (k !== "name") { one.name = "x"; } if (k !== "phone") { one.phone = "4165550110"; }
+      var one = {}; one[k] = t.value; // validate() checks fields independently; only errors[k] is read
       var r = validate(one); if (!r.errors[k]) { t.removeAttribute("aria-invalid"); var err = doc.getElementById("cb-" + k + "-err"); if (err) { err.textContent = ""; } }
     });
 
@@ -122,9 +122,9 @@
       var first = showErrors(r.errors);
       if (!r.ok) { status.textContent = ""; status.className = "cb-status"; if (first) { first.focus(); } return; }
       for (k in FIELDS) { if (el(k)) { el(k).value = r.values[k]; } } // show the trimmed values
-      if (r.spam) { form.reset(); setStatus("ok", ["Thanks. We got your request."]); return; } // honeypot: never sent
+      if (r.spam) { form.reset(); setStatus("ok", ["Thanks, we got your message and will reply by email."]); return; } // honeypot: never sent, same text as success
       sending = true; if (btn) { btn.disabled = true; btn.textContent = "Sending..."; } form.setAttribute("aria-busy", "true");
-      setStatus("ok", ["Sending your request..."]);
+      setStatus("ok", ["Sending your message..."]);
       var hidden = { access_key: el("access_key").value, subject: el("subject").value, from_name: el("from_name").value };
       var ctrl = (typeof win.AbortController === "function") ? new win.AbortController() : null;
       var timer = win.setTimeout(function () { if (ctrl) { ctrl.abort(); } }, TIMEOUT_MS);
@@ -136,9 +136,8 @@
       }).then(function (out) {
         win.clearTimeout(timer); done();
         if (out.ok && out.j && out.j.success === true) {
-          var name = r.values.name, phone = r.values.phone;
           form.reset();
-          setStatus("ok", ["Thanks, " + name + ". We got your request and will call you back at " + phone + "."]);
+          setStatus("ok", ["Thanks, we got your message and will reply by email."]);
         } else { fail(); }
       }, function () { win.clearTimeout(timer); done(); fail(); });
     });
