@@ -6,7 +6,7 @@
 <title>GTA Front Desk | AI front desk for GTA HVAC and plumbing shops</title>
 <meta name="description" content="Done-for-you AI front desk for GTA heating, cooling and plumbing shops with 1 to 10 trucks. Answers 24/7, texts back missed callers, books jobs, routes emergencies to your on-call tech. $497/month.">
 <link rel="canonical" href="https://gtafrontdesk.ca/">
-<meta name="theme-color" content="#0B1D36">
+<meta name="theme-color" content="#05080F">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gtafrontdesk.ca/">
 <meta property="og:title" content="GTA Front Desk: the phone rings while you're on the roof. We pick it up.">
@@ -21,89 +21,35 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<style>
-:root{--navy:#0B1D36;--card:#12284A;--line:#25406A;--orange:#E85D04;--ink:#E8EEF4;--muted:#B7C3D4}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Geist,Satoshi,Outfit,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;font-size:17px}
-a{color:var(--orange)}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-input:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.card a:not(.btn){color:#FF8A3D}
-.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--ink);color:var(--navy);padding:8px;z-index:9}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
-.brand{font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
-.btn{display:inline-block;background:var(--orange);color:var(--navy);text-decoration:none;font-weight:800;padding:14px 22px;border-radius:10px;font-size:1.05rem}
-.btn.sm{padding:10px 14px;font-size:.95rem}
-.btn:hover{filter:brightness(1.08)}
-.hero{padding:48px 0 24px}
-.eyebrow{color:var(--muted);font-size:.95rem;margin:0 0 8px}
-h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.01em}
-h1 em{font-style:normal;color:var(--orange)}
-.lede{color:var(--muted);font-size:1.12rem;max-width:42rem;margin:0 0 24px}
-.sub{color:var(--muted);font-size:.9rem;margin-top:10px}
-section{padding:28px 0}
-h2{font-size:clamp(1.45rem,4vw,1.9rem);margin:0 0 16px;line-height:1.2}
-h3{font-size:1.08rem;margin:0 0 6px}
-.grid{display:grid;gap:14px}
-@media(min-width:700px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.card p{margin:0;color:var(--muted)}
-.step{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:var(--navy);font-weight:800;margin-bottom:10px}
-.price{font-size:clamp(2.2rem,7vw,3rem);font-weight:800;margin:0;line-height:1}
-.price small{font-size:1rem;font-weight:600;color:var(--muted)}
-ul.ticks{list-style:none;padding:0;margin:16px 0}
-ul.ticks li{padding-left:28px;position:relative;margin:8px 0}
-ul.ticks li::before{content:"";position:absolute;left:4px;top:.45em;width:12px;height:7px;border-left:3px solid var(--orange);border-bottom:3px solid var(--orange);transform:rotate(-45deg)}
-.calc label{display:block;font-size:.95rem;margin:12px 0 4px;color:var(--ink)}
-.calc input{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#081629;color:var(--ink);font-size:1rem}
-.out{font-size:2rem;font-weight:800;color:var(--orange);margin:6px 0}
-.calc .hint{font-size:.85rem;color:var(--muted);margin:4px 0 0}
-.calc .warn{font-size:.88rem;color:#FFB4A8;margin:4px 0 0}
-.calc .warn:empty{display:none}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:10px 0}
-summary{cursor:pointer;font-weight:700}
-details p{color:var(--muted);margin:10px 0 0}
-.cta{text-align:center;padding:40px 0 48px}
-.cta p{color:var(--muted)}
-.fine{color:var(--muted);font-size:.88rem}
-.ctarow{margin-top:4px}
-.refund{margin:12px 0 0;padding:10px 14px;border-left:4px solid var(--orange);background:#0E2240;color:var(--ink);font-weight:600}
-.strip{margin:16px 0 4px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.strip div{display:grid;grid-template-columns:1fr;gap:2px;padding:10px 14px;border-top:1px solid var(--line)}
-.strip div:first-child{border-top:0}
-.strip span:last-child{color:var(--muted)}
-.strip .us{background:#0E2240}.strip .us span{color:var(--ink);font-weight:700}
-@media(min-width:700px){.strip div{grid-template-columns:2fr 3fr;gap:12px}}
-.founder p{color:var(--ink)}
-footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font-size:.9rem}
-.by{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--ink);font-weight:600}
-.by svg{width:24px;height:24px;flex:none}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="preload" href="/assets/fonts/outfit-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap">
-    <a class="brand" href="/">GTA Front Desk</a>
+    <a class="brand" href="/"><img src="assets/favicon.svg" alt="" width="28" height="28">GTA Front Desk</a>
     <a class="btn sm" href="#contact">Book a demo</a>
   </div>
 </header>
 <main id="main">
   <div class="wrap">
     <section class="hero" aria-labelledby="h1">
+      <div class="hero-copy">
       <p class="eyebrow">Greater Toronto Area · HVAC and plumbing shops · 1 to 10 trucks</p>
       <h1 id="h1">The phone rings while you're on the roof. <em>We pick it up.</em></h1>
       <p class="lede">GTA Front Desk answers 24/7 in your company name, texts back hang-ups, books only the windows you open, and sends gas, no-heat, and flood calls to your on-call tech. You call the sample shop before you pay. $497 CAD a month, $497 setup, cancel anytime.</p>
-      <p><a class="btn" href="tel:+12895134357">Call the sample heating company</a> <span class="sub">It picks up now: +1 289-513-4357 (289-513-HELP)</span></p>
+      <p><a class="btn" href="tel:+12895134357">Call the sample heating company</a> <span class="sub"><span class="live" aria-hidden="true"></span>It picks up now: +1 289-513-4357 (289-513-HELP)</span></p>
       <p class="sub">Demo line for a fictional HVAC shop in the GTA. No real bookings are made.</p>
       <div class="ctarow">
         <!-- CALENDAR SLOT: when a Cal.com (or Google appointment) page exists, change this href to that URL and the label to "Pick a 15-minute slot". -->
         <a class="btn" href="mailto:gtafrontdesk@agentmail.to?subject=Book%20a%2015-minute%20demo&amp;body=Shop%20name%3A%0AYour%20name%3A%0ABest%20day%2Ftime%20for%2015%20minutes%3A%0A">Book a 15-minute demo</a>
         <p class="sub">or email <a href="mailto:gtafrontdesk@agentmail.to">gtafrontdesk@agentmail.to</a></p>
+      </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="grid-bg"></div><div class="orb"></div><div class="ripple"></div><div class="ripple r2"></div><div class="ripple r3"></div><div class="ring"></div>
+        <div class="handset"><svg viewBox="0 0 24 24" fill="none" stroke="#7FE5F5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
       </div>
     </section>
 
@@ -146,8 +92,8 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
             <label for="close">% of answered calls that become jobs</label><input id="close" type="number" inputmode="numeric" min="0" max="100" value="30" aria-describedby="close-hint close-warn"><p class="hint" id="close-hint">0 to 100%</p><p class="warn" id="close-warn" aria-live="polite"></p>
             <label for="job">Average job value (CAD)</label><input id="job" type="number" inputmode="numeric" min="0" max="20000" value="350" aria-describedby="job-hint job-warn"><p class="hint" id="job-hint">CA$0 to CA$20,000</p><p class="warn" id="job-warn" aria-live="polite"></p>
           </div>
-          <div aria-live="polite">
-            <p class="fine" style="margin-top:12px">Estimated jobs lost per month</p>
+          <div class="result" aria-live="polite">
+            <p class="fine" style="margin-top:0">Estimated jobs lost per month</p>
             <p class="out" id="lost">CA$3,637 / month</p>
             <p class="fine" id="detail">8.0 missed calls a week x 30% x CA$350 x 4.33 weeks = about 10.4 jobs a month.</p>
           </div>
@@ -157,7 +103,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
 
     <section aria-labelledby="pricing">
       <h2 id="pricing">Simple pricing</h2>
-      <div class="card">
+      <div class="card pricing-card">
         <p class="price">$497 <small>CAD / month</small></p>
         <p style="color:var(--muted);margin-top:8px">Plus a one-time $497 setup fee. Plus applicable taxes.</p>
         <p class="refund">First month refunded if it books zero jobs you accept. Setup fee refunded if you do not approve the test calls.</p>
@@ -209,5 +155,6 @@ footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);f
   </div>
 </footer>
 <script src="assets/js/calc.js" defer></script>
+<script src="assets/js/fx.js" defer></script>
 </body>
 </html>
