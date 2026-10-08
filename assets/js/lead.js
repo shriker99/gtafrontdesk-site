@@ -14,7 +14,7 @@
   "use strict";
 
   var ENDPOINT = "https://api.web3forms.com/submit";
-  var FALLBACK_EMAIL = "gtafrontdesk@agentmail.to";
+  var FALLBACK_EMAIL = "hello@gtafrontdesk.ca";
   var TIMEOUT_MS = 15000;
   // Same string as the phone input's pattern attribute (the browser anchors it as ^(?:...)$).
   // Accepts 416-555-0110, (416) 555-0110, 416.555.0110, 416 555 0110, 4165550110, +1 416 555 0110, 1-416-555-0110.
