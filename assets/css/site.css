@@ -139,6 +139,8 @@ footer{border-top:1px solid var(--stroke);padding:28px 0 40px;color:var(--muted)
 @media(prefers-reduced-motion:no-preference){
   .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
   .js .reveal.in{opacity:1;transform:none}
+  /* anchor targets (h2 with id, #contact) fade only, so a #jump lands exactly below the sticky header */
+  .js h2.reveal,.js .reveal[id]{transform:none}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
