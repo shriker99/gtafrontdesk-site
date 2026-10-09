@@ -175,3 +175,5 @@ button.btn[disabled]{cursor:progress;opacity:.75;transform:none}
   .ripple{display:none}
 }
 @media print{.js .reveal{opacity:1!important;transform:none!important}header{position:static}}
+
+.demo-first{margin:0 0 1rem}
