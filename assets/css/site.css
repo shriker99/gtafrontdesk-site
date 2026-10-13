@@ -58,6 +58,13 @@ h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 28px rgba(34,211,238,.
 .ripple.r2{animation-delay:1.2s}.ripple.r3{animation-delay:2.4s}
 .handset{position:absolute;inset:0;display:grid;place-items:center}
 .handset svg{width:22%;height:22%;filter:drop-shadow(0 0 14px rgba(34,211,238,.7))}
+/* hero handset: tap-to-call (ring area is the hit target; svg sized to match original 22% of hero-art) */
+.handset-link{position:absolute;inset:22%;z-index:2;display:block;border-radius:50%;cursor:pointer;transition:transform .2s ease,filter .2s ease;-webkit-tap-highlight-color:transparent}
+.handset-link .handset svg{width:39.2857%;height:39.2857%;transition:filter .2s ease}
+.handset-link:hover,.handset-link:focus-visible{transform:scale(1.05)}
+.handset-link:hover .handset svg,.handset-link:focus-visible .handset svg{filter:drop-shadow(0 0 22px rgba(127,229,245,.95))}
+.handset-link:focus{outline:none}a.handset-link:focus-visible{outline:none;border-radius:50%;box-shadow:0 0 0 3px #05080F,0 0 0 5px #7FE5F5}
+@media (prefers-reduced-motion:reduce){.handset-link,.handset-link .handset svg{transition:none}}
 .grid-bg{position:absolute;inset:-10%;background-image:linear-gradient(rgba(125,175,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(125,175,255,.07) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 30%,transparent 70%);mask-image:radial-gradient(circle at 50% 50%,#000 30%,transparent 70%)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes ripple{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
